@@ -12,7 +12,7 @@ public class Director extends Manager {
     @Override
     public double getNetSalary() {
 
-        double BaseSalary = super.getGrossSalary()+ReusaxCorp.Bonus;
+        double BaseSalary = super.getGrossSalary()+Corporation.Bonus;
         double NetSalary;
         double SmallTaxes = 0.9;
         double MediumTaxes = 0.8;

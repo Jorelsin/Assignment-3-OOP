@@ -35,4 +35,9 @@ public class Employee {
     public String getID() {
         return ID;
     }
+
+    @Override
+    public String toString (){
+        return this.ID+": "+this.name;
+    }
 }
