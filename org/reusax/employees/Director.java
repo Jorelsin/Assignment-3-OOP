@@ -12,25 +12,25 @@ public class Director extends Manager {
     @Override
     public double getNetSalary() {
 
-        double BaseSalary = super.getGrossSalary()+Corporation.Bonus;
-        double NetSalary;
-        double SmallTaxes = 0.9;
-        double MediumTaxes = 0.8;
-        double LargeTaxes = 0.6;
-        double FirstTaxLine = 30000;
-        double SecondTaxLine = 50000;
-        double preRichAmount = SecondTaxLine*MediumTaxes;
+        double baseSalary = super.getGrossSalary()+Corporation.Bonus;
+        double netSalary;
+        double smallTaxes = 0.9;
+        double mediumTaxes = 0.8;
+        double largeTaxes = 0.6;
+        double firstTaxLine = 30000;
+        double secondTaxLine = 50000;
+        double preRichAmount = secondTaxLine*mediumTaxes;
 
-        if (BaseSalary < FirstTaxLine){
-            NetSalary = BaseSalary*SmallTaxes;
-        }else if (BaseSalary < SecondTaxLine){
-            NetSalary = BaseSalary*MediumTaxes;
+        if (baseSalary < firstTaxLine){
+            netSalary = baseSalary*smallTaxes;
+        }else if (baseSalary < secondTaxLine){
+            netSalary = baseSalary*mediumTaxes;
         }else {
-            BaseSalary = (BaseSalary-SecondTaxLine)*LargeTaxes;
-            NetSalary = BaseSalary+preRichAmount;
+            baseSalary = (baseSalary-secondTaxLine)*largeTaxes;
+            netSalary = baseSalary+preRichAmount;
         }
 
-        return NetSalary;
+        return netSalary;
     }
 
     @Override
