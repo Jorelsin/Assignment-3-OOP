@@ -14,7 +14,7 @@ public class Intern extends Employee {
 
         double netSalary;
         double studyBonus = 1000;
-        
+
         if (GPA <= 5){
             netSalary = 0;
         }else if (GPA > 8){

@@ -45,4 +45,12 @@ public class Director extends Manager {
     public void setDepartment(Departments department) {
         this.department = department;
     }
+
+    public enum Departments {
+
+        Bussnies,
+        Technical,
+        Human_Reasources,
+
+    }
 }

@@ -45,4 +45,13 @@ public class Manager extends Employee {
     public void setDegree(Degrees degree) {
         this.degree = degree;
     }
+
+    public enum Degrees{
+
+        BSc,
+        MSc,
+        PhD,
+
+    }
+
 }
