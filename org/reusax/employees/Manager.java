@@ -2,8 +2,8 @@ package org.reusax.employees;
 
 public class Manager extends Employee {
 
-    private String degree;
-    public Manager(String name, String ID, double grossSalary, String degree) {
+    private Degrees degree;
+    public Manager(String name, String ID, double grossSalary, Degrees degree) {
         super(name, ID, grossSalary);
         this.degree = degree;
     }
@@ -12,40 +12,37 @@ public class Manager extends Employee {
     public double getNetSalary() {
 
         double taxes = 0.9;
-        double NetSalary = this.getGrossSalary()*taxes;
-        return NetSalary;
+        double netSalary = this.getGrossSalary()*taxes;
+        return netSalary;
     }
 
     @Override
     public double getGrossSalary() {
-        double NetSalary;
-        double BScSalary  = super.getGrossSalary()*1.1;
-        double MScSalary  = super.getGrossSalary()*1.2;
-        double PhDSalary  = super.getGrossSalary()*1.35;
+        double netSalary;
 
         switch (degree){
-            case ("BSc"):
-                NetSalary = BScSalary;
+            case BSc:
+                netSalary = super.getGrossSalary()*1.1;
                 break;
-            case ("MSc"):
-                NetSalary = MScSalary;
+            case MSc:
+                netSalary = super.getGrossSalary()*1.2;
                 break;
-            case ("PhD"):
-                NetSalary = PhDSalary;
+            case PhD:
+                netSalary = super.getGrossSalary()*1.35;
                 break;
             default:
-                NetSalary = super.getGrossSalary();
+                netSalary = super.getGrossSalary();
                 break;
         }
 
-        return NetSalary;
+        return netSalary;
     }
 
-    public String getDegree() {
+    public Degrees getDegree() {
         return degree;
     }
 
-    public void setDegree(String degree) {
+    public void setDegree(Degrees degree) {
         this.degree = degree;
     }
 }

@@ -1,4 +1,6 @@
 package org.reusax;
+import org.reusax.employees.Degrees;
+import org.reusax.employees.Departments;
 import org.reusax.employees.Employee;
 
 import java.util.*;
@@ -11,8 +13,8 @@ public class UserInterface {
     private String ID;
     private double salary;
     private int GPA;
-    private String degree;
-    private String department;
+    private Degrees degree;
+    private Departments department;
     private ReusaxCorp corp;
 
 public UserInterface() {

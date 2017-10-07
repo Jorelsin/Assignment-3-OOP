@@ -2,9 +2,9 @@ package org.reusax.employees;
 
 public class Director extends Manager {
 
-    private String department;
+    private Departments department;
 
-    public Director(String name, String ID, double grossSalary, String degree, String department) {
+    public Director(String name, String ID, double grossSalary, Degrees degree, Departments department) {
         super(name, ID, grossSalary, degree);
         this.department = department;
     }
@@ -38,11 +38,11 @@ public class Director extends Manager {
         return super.getGrossSalary()+ReusaxCorp.Bonus;
     }
 
-    public String getDepartment() {
+    public Departments getDepartment() {
         return department;
     }
 
-    public void setDepartment(String department) {
+    public void setDepartment(Departments department) {
         this.department = department;
     }
 }
